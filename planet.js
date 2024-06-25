@@ -21,7 +21,7 @@ let planetnameH1;
 let climate;
 let terrain;
 let characterList = [];
-let planetList = [];
+let filmList = [];
 const baseUrl = `https://swapi2.azurewebsites.net/api`;
 
 // Runs on page load
@@ -81,7 +81,7 @@ const renderPlanet = planet => {
   //birthYearSpan.textContent = character?.birth_year;
   //homeworldSpan.innerHTML = `<a href="/planet.html?id=${character?.homeworld.id}">${character?.homeworld.name}</a>`;
   const characterLis = planet?.characters?.map(character => `<li><a href="/character.html?id=${character.id}">${character.name}</li>`)
-  characctersUL.innerHTML = characterLis.join("");
+  charactersUL.innerHTML = characterLis.join("");
   const filmsLis = planet?.films?.map(film => `<li><a href="/film.html?id=${film.id}">${film.title}</li>`)
   filmsUL.innerHTML = filmsLis.join("");
 }
